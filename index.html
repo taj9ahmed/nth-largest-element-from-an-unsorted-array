@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+    <h1>n'th largest element from an unsorted array</h1>
+    
+    <script>
+      
+      var arr = [ 43, 56, 23, 89, 88, 90, 99, 652],
+          nth = 4;
+          
+      function nthlargest( arr , nth ) {
+        
+        //clone the arr
+        let arrCopy = arr.map( x => x );
+        //order the arrCopy
+        arrCopy.sort( ( a, b ) => a > b ? -1 : 1 );
+        
+        let result = arrCopy[ nth-1 ];
+        
+        return ( result );
+        
+      }
+      
+      console.log( nthlargest( arr , nth) );
+      
+    </script>
+  </body>
+
+</html>
